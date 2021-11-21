@@ -129,9 +129,7 @@ export default defineComponent({
     return () => {
       const classes = classesRef.value
       const selected = selectedRef.value
-
       console.log(methodRef)
-
       return (
         // <StyleThemeProvider>
         // <VJSFThemeProvider theme={theme as any}>
@@ -176,7 +174,11 @@ export default defineComponent({
               </div>
             </div>
             <div class={classes.form}>
-              <SchemaForm />
+              <SchemaForm
+                schema={demo.schema}
+                value={demo.data}
+                onChange={handleChange}
+              />
               {/* <SchemaForm
                 schema={demos.schema!}
                 uiSchema={demos.uiSchema!}

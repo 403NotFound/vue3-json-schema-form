@@ -1,7 +1,3 @@
-import { defineComponent, h } from 'vue'
+import SchemaFrom from './SchemaForm'
 
-export default defineComponent({
-  setup(p, { slots }) {
-    return () => h('div', 'this is form')
-  },
-})
+export default SchemaFrom
